@@ -15,3 +15,9 @@ PDF file bytes stay in browser memory; the app fetches its libraries from jsDeli
 
 ## Verification
 JavaScript syntax checked using Node. Browser interactions tested with simulated PDF engines, not actual PDF parsing/export. Network restriction prevented fetching actual external libraries during testing.
+
+## Zoom and existing text replacement
+
+- Use the footer percentage field, +/−, Fit page, Fit width, or Actual size. Ctrl/Cmd + wheel or +/− zooms around the document; Ctrl/Cmd + 0 fits the page. Hand mode allows mouse panning and touch scrolling.
+- Choose **Edit PDF text** and click a selectable horizontal text run. Change the replacement, size, text color, background cover, and fit-width setting. Leave replacement blank to visually cover the run. Undo and redo are supported.
+- This is visual replacement, not native content-stream editing or secure redaction. Original text remains in the exported PDF, and added replacement text is rasterized in the overlay. Complex fonts, vertical/rotated text runs, scans, and patterned backgrounds may not work as expected. Do not use this tool to remove sensitive information.
